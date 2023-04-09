@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img class="title" src="images/logo.svg">
+    <!-- main cont div -->
+    <div class="container">
+      <!-- first-cont div -->
+      <div>
+        <h2>Bill</h2>
+        <input type="text" class="input1" placeholder="0" required />
+        <h3 class="choice">Select Tip %</h3>
+        <section class="btnSection">
+          <button class="tip-5 btnpercent">5%</button>
+          <button class="tip-10 btnpercent">10%</button>
+          <button class="tip-15 btnpercent">15%</button>
+          <button class="tip-25 btnpercent">25%</button>
+          <button class="tip-50 btnpercent">50%</button>
+          <input
+            class="custom-percent inputpercent"
+            type="number"
+            ,
+            placeholder="Custom"
+            required
+          />
+        </section>
+        <div class="amount-people-cont">
+          <h3 class="choice">Number of People</h3>
+          <p class="validation none">Can’t be zero</p>
+        </div>
+        <input class="amount-people input2" placeholder="0" type="text" />
+      </div>
+      <!-- second cont-div -->
+      <div>
+        <div class="result-cont">
+          <div class="tip-amount">
+            <div>
+              <h1 class="result">Tip Amount</h1>
+              <p class="person">/ person</p>
+            </div>
+            <div>
+              <h1 class="amount-tip amount">$0.00</h1>
+            </div>
+          </div>
+            <div class="total">
+              <div>
+                <h1 class="result">Total</h1>
+              <p class="person">/ person</p>
+              </div>
+              <div>
+                <h1 class="amount-total amount">$0.00</h1>
+              </div>
+            </div>
+          
+          <button class="reset">RESET</button>
+        </div>
+      </div>
+      
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
