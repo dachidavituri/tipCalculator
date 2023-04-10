@@ -39,7 +39,23 @@ tip25Percent.addEventListener("click", function () {
 tip50Percent.addEventListener("click", function () {
   calculateTipAndTotal(50);
 });
-
+// 
+AmountPeople.addEventListener('input', function(){
+  if (billAmount.value == "" || AmountPeople.value == "" || AmountPeople.value == 0 || customPercent.value == 0) {
+    document.querySelector(".amount-tip").textContent = "$0.00";
+    document.querySelector(".amount-total").textContent = "$0.00";
+  } else {
+    let tipAmount =
+      ((billAmount.value / AmountPeople.value) * customPercent.value) / 100;
+    let total =
+      Number(billAmount.value) + Number(tipAmount * AmountPeople.value);
+    const integerValue = tipAmount.toFixed(2);
+    const integerTotal = total.toFixed(2);
+    document.querySelector(".amount-tip").textContent = "$" + integerValue;
+    document.querySelector(".amount-total").textContent = "$" + integerTotal;
+  }
+})
+// 
 // custom percentage
 console.log(customPercent.value);
 const customPercentCalculate = () => {
@@ -59,6 +75,7 @@ const customPercentCalculate = () => {
 };
 customPercent.addEventListener("input", customPercentCalculate);
 customPercent.addEventListener("keyup", customPercentCalculate);
+
 // reset button
 resetBtn.addEventListener("click", function () {
   document.querySelector(".amount-tip").textContent = "$0.00";
