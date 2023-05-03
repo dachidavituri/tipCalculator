@@ -59,6 +59,9 @@ AmountPeople.addEventListener('input', function(){
 // custom percentage
 console.log(customPercent.value);
 const customPercentCalculate = () => {
+  if (customPercent.value < 0){
+    customPercent.value = 0
+  }
   if (billAmount.value == "" || AmountPeople.value == "" || AmountPeople.value == 0) {
     document.querySelector(".amount-tip").textContent = "$0.00";
     document.querySelector(".amount-total").textContent = "$0.00";
