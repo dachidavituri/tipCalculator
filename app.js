@@ -59,7 +59,7 @@ AmountPeople.addEventListener('input', function(){
 // custom percentage
 console.log(customPercent.value);
 const customPercentCalculate = () => {
-  if (customPercent.value < 0){
+  if (customPercent.value < 0 || customPercent.value > 100){
     customPercent.value = 0
   }
   if (billAmount.value == "" || AmountPeople.value == "" || AmountPeople.value == 0) {
